@@ -6,8 +6,10 @@ console.log('Problem Solving Q: 11');
 Write a function that returns YES if a number is a power of 2, and NO otherwise.
 */
 
-function isPowerOfTwo() {
-  // YOUR CODE HERE
+function isPowerOfTwo(n) {
+const x= Math.sqrt(n);
+if (Number.isInteger(x)) return "YES";
+else return "NO"
 }
 
 /* 
