@@ -7,15 +7,11 @@ Write a function that returns the number of unique items in an array.
 */
 
 function uniqueItems(arr) {
-  let c = 0;
-  // for (let i = 0; i < arr.length; i++) {
-  //   if (arr[i] === arr[i + 1]) {
-  //     arr.splice(i, 1);
-  //     c++;
-  //   }
-  // }
-  const newArr = arr.filter(e=> e=e+1);
-  return newArr;
+  let unique = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!unique.includes(arr[i])) unique.push(arr[i]);
+  }
+  return unique.length;
 }
 
 /*
