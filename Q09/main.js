@@ -8,11 +8,11 @@ and 0s.
 */
 
 function longestSequence(arr) {
-  let newArr= arr.join('').split('0'),result='';
+  let newArr = arr.join('').split('0'), result = '';
   for (let i = 0; i < newArr.length; i++) {
-     if(newArr[i].length > result.length){
-      result= newArr[i];
-     } 
+    if (newArr[i].length > result.length) {
+      result = newArr[i];
+    }
   }
   if (!result) return 'There is no one sequenced';
   return result.length;
