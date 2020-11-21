@@ -7,14 +7,14 @@ Write a function that reverses the characters of every word of a sentence. Input
 */
 
 function reverseEachWord(str) {
-const arr= str.split(' '), newArr=[];
-for (let i = 0; i < arr.length; i++) {
-  newArr.push(arr[i].split('').reverse().join(''));
-}
-return newArr.join(' ') ;
+  const arr = str.split(' '), newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(arr[i].split('').reverse().join(''));
+  }
+  return newArr.join(' ');
 }
 
-/* 
+/*
 Examples:
 reverseEachWord("This is a test") // => "sihT si a tset"
 reverseEachWord("Lets code guys") // => "steL edoc syug"
