@@ -6,8 +6,12 @@ console.log('Problem Solving Q: 12');
 Write a function that reverses the characters of every word of a sentence. Input sentences contain only English letter and space characters.
 */
 
-function reverseEachWord() {
-  // YOUR CODE HERE
+function reverseEachWord(str) {
+const arr= str.split(' '), newArr=[];
+for (let i = 0; i < arr.length; i++) {
+  newArr.push(arr[i].split('').reverse().join(''));
+}
+return newArr.join(' ') ;
 }
 
 /* 
