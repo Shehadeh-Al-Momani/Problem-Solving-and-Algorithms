@@ -18,7 +18,6 @@ function commonCharacters(str1, str2) {
       }
     }
   }
-  // return arr.filter((e,i) => arr.indexOf(e) === i).join('')
   return arr.join('');
 }
 
