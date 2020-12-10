@@ -24,11 +24,65 @@ function LongestWord(sen) {
   return output;
 }
 
+/* Q1: Longest Word, solved in session*/
+function longestWord(sen) {
+  let longWord = '';
+  // convert the sen (string) to an array (have each word alone)
+  sen = sen.split(' ');
+  for(let i =0; i < sen.length; i++) {
+    if (sen[i].length > longWord.length) {
+      longWord = sen[i];
+    }
+  }
+
+  return longWord;
+}
+
 /* Q2: Longest Word_2 */
+
+function longestWord_2(sen) {
+  // Catching the special chars
+  const SpecailCharRegex = /[^\w\s]/gi;
+  let longWord = '';
+  // convert the sen (string) to an array (have each word alone)
+  sen = sen.split(' ');
+  for (let i = 0; i < sen.length; i++) {
+    sen[i] = sen[i].replace(SpecailCharRegex, '');
+    if (sen[i].length > longWord.length) {
+      longWord = sen[i];
+    }
+  }
+
+  return longWord;
+}
 
 /* Q3: First Reverse */
 
+function firstReverse(str) {
+  let strReverse = '';
+  str = str.split('');
+  for (let i = str.length - 1; i >= 0; i--) {
+    strReverse += str[i];
+  }
+
+  return strReverse;
+}
+
 /* Q4: Username Validation */
+
+function usernameValidation(str) {
+  const SpecialCharRegex = /[^\w\s]/;
+  return (
+    str.length >= 4 &&
+    str.length <= 25 &&
+    !!str[0].match(/[A-Za-z]/) &&
+    !SpecialCharRegex.test(str) &&
+    str[str.length - 1] !== '_'
+  );
+
+  // Another solution with just Regex 
+  // const reg1 = /^[a-zA-Z]([a-zA-Z0-9_]){2,22}[a-zA-Z0-9]$/; return reg1.test(str); 
+}
 
 /* Q5: Find Intersection */
 /* Q6: Even or Not */
