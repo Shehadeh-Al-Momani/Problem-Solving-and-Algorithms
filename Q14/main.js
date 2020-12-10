@@ -7,11 +7,20 @@ Given an array of negative/positive integers, return the element in the center p
 If the array has an even number of elements, return the average of the two middle elements instead.
 */
 
-function ArrayMiddle() {
-  // YOUR CODE HERE
+function ArrayMiddle(arr) {
+  if (arr.length % 2 !== 0) {
+    return arr[(arr.length - 1) / 2];
+  }
+  else {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+    return sum / arr.length;
+  }
 }
 
-/* 
+/*
 Examples:
 ArrayMiddle([200,5,100]) // => 5
 ArrayMiddle([2,3,2,3,2]) // => 2
