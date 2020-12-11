@@ -8,7 +8,7 @@ Write a function that accepts an array of integers and returns the largest produ
 
 function largestProductOfThree(arr) {
   let temp, limit = 3, factor = 1;
-  for (let i = 0, j = i + 1; i < arr.length; i++, j++) {
+  for (let i = 0; i < arr.length; i++) {
     for (let j = i + 1; j < arr.length; j++) {
       if (arr[j] > arr[i]) {
         temp = arr[j];
