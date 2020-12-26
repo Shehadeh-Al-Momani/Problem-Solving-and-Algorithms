@@ -13,11 +13,21 @@ If there is no intersection, return the string false.
 
 function findIntersection(strArr) {
   const arr1 = strArr[0].split(', '), arr2 = strArr[1].split(', ');
-  const arr = arr1.filter(e=>arr2.includes(e));
+  const arr = arr1.filter(e => arr2.includes(e));
   if (!arr.length) return false;
-   return arr;
+  return arr;
 }
-
+// OR 
+function findIntersection(strArr) {
+  let arr1 = strArr[0].split(', '), arr2 = strArr[1].split(', ');
+  let result = [];
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr2.indexOf(arr1[i]) !== -1) {
+      result.push(arr1[i]);
+    }
+  }
+  return (result.length > 0) ? result.join() : false;
+}
 /*
 Examples:
 findIntersection(['1, 3, 4, 7, 13', '1, 2, 4, 13, 15']); // => '1,4,13'

@@ -8,21 +8,14 @@ If the array has an even number of elements, return the average of the two middl
 */
 
 function ArrayMiddle(arr) {
-  if (arr.length % 2 !== 0) {
-    return arr[(arr.length - 1) / 2];
-  }
-  else {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-      sum += arr[i];
-    }
-    return sum / arr.length;
-  }
-}
-
+  const mid = Math.floor(arr.length / 2);
+  const isEven = arr.length % 2 === 0;
+  return isEven ? (arr[mid] + arr[mid - 1]) / 2 : arr[mid];
+};
 /*
 Examples:
 ArrayMiddle([200,5,100]) // => 5
 ArrayMiddle([2,3,2,3,2]) // => 2
 ArrayMiddle([2,3]) // => 2.5
+ArrayMiddle([2,3,2,6]) // => 2.5
 */

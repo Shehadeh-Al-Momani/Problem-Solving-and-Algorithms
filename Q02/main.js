@@ -7,16 +7,16 @@ Have the function LongestWord(sen) take the sen parameter being passed and retur
 */
 
 function longestWord_2(sen) {
-  const regExp= /[^A-Za-z0-9 ]/g;
-  const arr =sen.replace(regExp,"").split(' ');
-  let  max="";
-  for (let i = 0; i < arr.length; i++) {
-  if (arr[i].length > max.length) max=arr[i];
+  const RegExp = /[^A-Za-z0-9 ]/g; // OR const RegExp = /[^\w\s]/gi;
+  sen = sen.replace(RegExp, "").split(' ');
+  let max = "";
+  for (let i = 0; i < sen.length; i++) {
+    if (sen[i].length > max.length) max = sen[i];
   }
-  return max ;
+  return max;
 }
 
-/* 
+/*
 Examples:
 longestWord_2('lol!- time.'); // => 'time'
 longestWord_2('I** love, cats'); // => 'love'

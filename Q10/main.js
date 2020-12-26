@@ -7,6 +7,23 @@ Write a function that returns the number of occurrences of the most frequent cha
 */
 
 function timesOfMostFreqChar(str) {
+  let obj = {}, largFreq = 0;
+  str.split('').forEach((e) => {
+    if (!obj[e]) {
+      obj[e] = 1;
+    }
+    else obj[e] += 1;
+  })
+  for (let k in obj) {
+    if (obj[k] > largFreq) {
+      largFreq = obj[k];
+    }
+  }
+  console.log('obj :', obj)
+  return largFreq;
+}
+// OR 
+function timesOfMostFreqChar(str) {
   let result = 0;
   for (let i = 0; i < str.length; i++) {
     let c = 0;
@@ -17,7 +34,6 @@ function timesOfMostFreqChar(str) {
   }
   return result
 }
-
 /*
 Examples:
 timesOfMostFreqChar('hello world') // => 3

@@ -20,6 +20,33 @@ function commonCharacters(str1, str2) {
   }
   return arr.join('');
 }
+// OR 
+function commonCharacters(str1, str2) {
+  const obj = {};
+  let commonCharacters = '';
+  str1.split('').forEach((e) => {
+    (!obj[e]) ? obj[e] = 1 : null;
+  })
+  str2.split('').forEach((e) => {
+    (obj[e]) ? obj[e] = 2 : 1;
+  })
+  for (const key in obj) {
+    if (obj[key] > 1 && key !== ' ') {
+      commonCharacters += key;
+    }
+  }
+  return commonCharacters;
+}
+// OR 
+function commonCharacters(str1, str2) {
+  let commonCharacters = '';
+  for (let ch of str1) {
+    if (str2.includes(ch) && !commonCharacters.includes(ch) && ch !== ' ') {
+      commonCharacters += ch;
+    }
+  }
+  return commonCharacters;
+};
 
 /*
 Examples:
@@ -27,3 +54,4 @@ commonCharacters('abc', 'abc') // => 'abc'
 commonCharacters('What is love?', "Baby don't hurt me") // => 'hatoe'
 commonCharacters('Riding on a buffalo makes me more approachable','so what') // => 'oash'
 */
+

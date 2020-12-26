@@ -7,15 +7,19 @@ Write a function that returns YES if a number is a power of 2, and NO otherwise.
 */
 
 function isPowerOfTwo(n) {
-const x= Math.sqrt(n);
-if (Number.isInteger(x)) return "YES";
-else return "NO"
+    const x = Math.sqrt(n);
+    return (Number.isInteger(x)) ? 'YES' : 'NO';
+}
+// OR 
+function isPowerOfTwo(n) {
+    if (typeof n !== 'number') return 'Not a number';
+    return ((Math.log(n) / Math.log(2)) % 1 === 0) ? 'YES' : 'NO';
 }
 
-/* 
+/*
 Examples:
-isPowerOfTwo(0) // => 'NO'  
-isPowerOfTwo(1) // => 'YES'  
+isPowerOfTwo(0) // => 'NO'
+isPowerOfTwo(1) // => 'YES'
 // I am sure not a typo 1 => YES
 
 isPowerOfTwo(2) // => 'YES'

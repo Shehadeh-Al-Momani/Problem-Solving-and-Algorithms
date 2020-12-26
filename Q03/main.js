@@ -7,10 +7,19 @@ Have the function FirstReverse(str) take the str parameter being passed and retu
 */
 
 function firstReverse(str) {
-return str.split('').reverse().join('')
+    return str.split('').reverse().join('');
 }
 
-/* 
+// OR 
+function firstReverse(str) {
+    let strReverse = '';
+    str = str.split('');
+    for (let i = str.length - 1; i >= 0; i--) {
+        strReverse += str[i];
+    }
+    return strReverse;
+}
+/*
 Examples:
 firstReverse('I Love Code'); // => 'edoC evoL I'
 firstReverse('Hello World'); // => 'dlroW olleH'

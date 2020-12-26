@@ -20,7 +20,21 @@ function usernameValidation(str) {
     return true;
   else return false
 }
-
+// OR 
+function usernameValidation(str) {
+  const SpecialCharRegex = /[^\w\s]/;
+  return (
+    str.length >= 4 &&
+    str.length <= 25 &&
+    !!str[0].match(/[A-Za-z]/) &&
+    !SpecialCharRegex.test(str) &&
+    str[str.length - 1] !== '_'
+  );
+  // OR 
+  function usernameValidation(str) {
+    reg1 = /^[a-zA-Z]([a-zA-Z0-9_]){2,22}[a-zA-Z0-9]$/;
+    return reg1.test(str);
+  };
 /*
 Examples:
 usernameValidation('aa_'); // => false

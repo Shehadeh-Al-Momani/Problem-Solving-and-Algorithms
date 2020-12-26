@@ -17,7 +17,15 @@ function longestSequence(arr) {
   if (!result) return 'There is no one sequenced';
   return result.length;
 }
-
+// OR 
+function longestSequence(arr) {
+  let longest = Number.NEGATIVE_INFINITY, currentSequence = 0;
+  arr.forEach((num) => {
+    (num) ? currentSequence++ : ((currentSequence > longest) ? longest = currentSequence : longest, currentSequence = 0);
+  });
+  (currentSequence > longest) ? longest = currentSequence : longest;
+  return (longest) ? longest : 'There is no one sequenced';
+}
 /*
 Examples:
 longestSequence([0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1]) // => 4
@@ -28,3 +36,4 @@ longestSequence([1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1]) // => 5
 longestSequence([1, 0, 0, 1]) // => 1
 longestSequence([0, 0, 0, 0]) // => 'There is no one sequenced'
 */
+

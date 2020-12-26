@@ -5,12 +5,9 @@ console.log('Problem Solving Q: 6');
 /*  
 Write a function that returns true if a number is even, and false otherwise.
 */
-
 function evenOrNot(n) {
-  if (n % 2 === 0) { return true; }
-  else { return false; }
+  return n % 2 === 0;
 }
-
 /*
 Examples:
 evenOrNot(1) // => false

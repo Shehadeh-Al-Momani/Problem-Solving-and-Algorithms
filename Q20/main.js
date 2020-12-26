@@ -7,13 +7,11 @@ Write a function that accepts an array of integers and returns the largest produ
 */
 
 function largestProductOfThree(arr) {
-  let temp, limit = 3, factor = 1;
+  let limit = 3, factor = 1;
   for (let i = 0; i < arr.length; i++) {
     for (let j = i + 1; j < arr.length; j++) {
       if (arr[j] > arr[i]) {
-        temp = arr[j];
-        arr[j] = arr[i];
-        arr[i] = temp;
+        [arr[j], arr[i]] = [arr[i], arr[j]];
       }
     }
   }
@@ -22,7 +20,11 @@ function largestProductOfThree(arr) {
   }
   return factor;
 }
-
+// OR 
+function largestProductOfThree(arr) {
+  arr.sort((a, b) => b - a);
+  return arr[0] * arr[1] * arr[2];
+}
 /*
 Examples:
 largestProductOfThree([2, 1, 3, 7]) // => 42
