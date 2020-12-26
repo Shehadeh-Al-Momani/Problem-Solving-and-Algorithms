@@ -22,7 +22,7 @@ function reverse(input) {
 }
 // OR 
 function reverse(input) {
-  return (typeof input === "string") ? input.split('').reverse().join('') : input.reverse();
+  return (typeof input === "string") ? [...input].reverse().join('') : input.reverse();
 }
 /*
 Examples:
