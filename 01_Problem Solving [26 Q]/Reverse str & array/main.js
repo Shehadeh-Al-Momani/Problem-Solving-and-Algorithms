@@ -24,6 +24,16 @@ function reverse(input) {
 function reverse(input) {
   return (typeof input === "string") ? [...input].reverse().join('') : input.reverse();
 }
+// OR 
+function reverse(input) {
+  let result;
+  (typeof input === "string") ? result = '' : result = [];
+
+  for (let letter of input) {
+    result = letter + result
+  }
+  return (typeof input === "string") ? result : [...result].map(e => Number(e));
+}
 /*
 Examples:
 reverse('hello') // => "olleh"
