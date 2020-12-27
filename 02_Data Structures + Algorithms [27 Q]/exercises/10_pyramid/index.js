@@ -15,21 +15,6 @@
 //       '#####'
 
 function pyramid(n) {
-    let result = '';
-    for (let i = 1; i <= n; i++) {
-        for (let k = 1; k <= (n - i); k++) {
-            result += " ";
-        }
-        for (let j = 1; j <= i; j++) {
-            result += "# ";
-        }
-        result += "\n";
-    }
-    console.log(result)
-}
-
-// OR 
-function pyramid(n) {
     for (let i = 1; i <= n; i++) {
         let result = "";
         for (let j = 1; j <= (2 * n - 1); j++) {
@@ -38,5 +23,21 @@ function pyramid(n) {
         console.log(result);
     }
 }
+
+//OR 
+// function pyramid(n) {
+//     let result = '';
+//     for (let i = 1; i <= n; i++) {
+//         for (let k = 1; k <= (n - i); k++) {
+//             result += " ";
+//         }
+//         for (let j = 1; j <= i; j++) {
+//             result += "# ";
+//         }
+//         result += "\n";
+//     }
+//     console.log(result)
+// }
+
 module.exports = pyramid;
 
