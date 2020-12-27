@@ -14,9 +14,9 @@ function reverse(str) {
     return result;
 }
 
-// OR Reverse a string using built-in methods
+// OR Reverse a string using built-in methods 
 // function reverse(str) {
-//     return (typeof str === "string") ? [...str].reverse().join('') : str.reverse();
+//     return [...str].reverse().join('');
 // }
 
 // OR Reverse a string using stack
