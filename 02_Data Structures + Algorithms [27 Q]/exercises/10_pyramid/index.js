@@ -28,5 +28,15 @@ function pyramid(n) {
     console.log(result)
 }
 
+// OR 
+function pyramid(n) {
+    for (let i = 1; i <= n; i++) {
+        let result = "";
+        for (let j = 1; j <= (2 * n - 1); j++) {
+            (j >= n + 1 - i && j <= n - 1 + i) ? result += "#" : result += " ";
+        }
+        console.log(result);
+    }
+}
 module.exports = pyramid;
 
