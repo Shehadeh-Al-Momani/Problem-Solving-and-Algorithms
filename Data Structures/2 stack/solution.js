@@ -5,18 +5,29 @@ class Stack {
   }
 
   push(value) {
-    this.data[this.top] = element;
-    this.top = this.top + 1;
+    this.data[this.top++] = value;
   }
 
   pop() {
-    if (this.isEmpty() === false) {
-      this.top = this.top - 1;
-      return this.data.pop();
+    if (!this.isEmpty()) {
+      return this.data[--this.top];
     }
+  }
+
+  peek() {
+    return this.data[this.top - 1];
+  }
+
+  size() {
+    return this.top;
+  }
+
+  clear() {
+    return this.top = 0;
   }
 
   isEmpty() {
     return this.top === 0;
   }
+
 }
