@@ -29,5 +29,4 @@ class Stack {
   isEmpty() {
     return this.top === 0;
   }
-
 }
