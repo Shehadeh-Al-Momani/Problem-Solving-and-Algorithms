@@ -26,6 +26,7 @@ function longestSequence(arr) {
   (currentSequence > longest) ? longest = currentSequence : longest;
   return (longest) ? longest : 'There is no one sequenced';
 }
+
 /*
 Examples:
 longestSequence([0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1]) // => 4

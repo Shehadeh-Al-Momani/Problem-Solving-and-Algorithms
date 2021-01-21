@@ -7,8 +7,7 @@ Write a function that calculates the largest possible sum of any n consecutive n
 */
 
 function largestPossibleSum(arr, n) {
-  let num = 0;
-  let temp_sum = 0;
+  let num = 0, temp_sum = 0;
   for (let i = 0; i < n - 1; i++) {
     temp_sum += arr[i];
   }

@@ -6,6 +6,7 @@ uses : when size of arrays are small .
 Time Complexity O(n2) => Quadratic .
 Space Complexity O(1) => Constant .
 
+```js
   function selectionSort(inputArr) { 
     let n = inputArr.length;        
     for(let i = 0; i < n; i++) {
@@ -25,16 +26,17 @@ Space Complexity O(1) => Constant .
     }
     return inputArr;
 }
+```
 
 1.2 Bubble Sort (in-place algorithm) :  
 uses : when we need get max number .
 Time Complexity O(n2) => Quadratic .
 Space Complexity O(1) => Constant .
 
+```js
 function bubbleSort(inputArr) {
     let n = inputArr.length;
-    let sorted = false;
-        
+    let sorted = false;        
     while (!sorted) {
         sorted = true;
         for(let i = 0; i < n; i++){
@@ -48,26 +50,27 @@ function bubbleSort(inputArr) {
     }
     return inputArr;
 }
-
+```
 1.3 Insertion Sort (in-place algorithm) :  
 Insertion Sort is a simple, stable, in-place, comparison sorting algorithm. ( the most best from Selection and Bubble)
 Time Complexity O(n2) => Quadratic .
 Space Complexity O(1) => Constant .
 
-function insertionSort(inputArr) {
-    let n = inputArr.length;
-        for (let i = 1; i < n; i++) {
+```js
+function insertionSort(arr) {
+        for (let i = 1; i < arr.length; i++) {
             // Choosing the first element in our unsorted subarray
-            let current = inputArr[i];
+            let current = arr[i];
             // The last element of our sorted subarray
             let j = i-1; 
-            while ((j > -1) && (current < inputArr[j])) {
-                inputArr[j+1] = inputArr[j];
+            while ((j > -1) && (current < arr[j])) {
+                arr[j+1] = arr[j];
                 j--;
             }
-            inputArr[j+1] = current;
+            arr[j+1] = current;
         }
-    return inputArr;
+    return arr;
 }
+```
 
 1.4 Merge Sort : 

@@ -16,15 +16,23 @@ function uniqueItems(arr) {
 // OR 
 function uniqueItems(arr) {
   let obj = {};
-  for (let i = 0; i < arr.length; i++) {
-    if (!obj[arr[i]]) {
-      obj[arr[i]] = 1;
-    } else {
-      obj[arr[i]] += 1;
-    }
-  }
+  arr.forEach((item) => {
+    obj[item] = obj[item] + 1 || 1;
+  })
   return Object.keys(obj).length;
 }
+// OR 
+function uniqueItems(arr) {
+  let obj = {}, unique = 0;
+  arr.forEach((item) => {
+    obj[item] = 1;
+  })
+  for (const k in obj) {
+    unique+= obj[k] 
+  }
+  return unique;
+}
+
 /*
 Examples:
 uniqueItems([1, 1, 1, 1, 1]) // => 1

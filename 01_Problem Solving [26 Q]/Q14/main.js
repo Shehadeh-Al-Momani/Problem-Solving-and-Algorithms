@@ -8,9 +8,9 @@ If the array has an even number of elements, return the average of the two middl
 */
 
 function ArrayMiddle(arr) {
-  const mid = Math.floor(arr.length / 2);
+  const mid = Math.ceil(arr.length / 2);
   const isEven = arr.length % 2 === 0;
-  return isEven ? (arr[mid] + arr[mid - 1]) / 2 : arr[mid];
+  return isEven ? (arr[mid] + arr[mid - 1]) / 2 : arr[mid-1];
 };
 /*
 Examples:

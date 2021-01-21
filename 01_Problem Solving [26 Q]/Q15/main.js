@@ -47,6 +47,7 @@ function jointCharacters(str1, str2) {
   }
   return commonCharacters;
 };
+ 
 
 /* 
 Examples:

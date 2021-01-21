@@ -11,7 +11,7 @@ function is_array(input) {
 }
 // OR 
 function is_array(input) {
-  return (toString.call(input) === "[object Array]") ? true : false;
+  return toString.call(input) === "[object Array]";
 };
 /*
 Examples:

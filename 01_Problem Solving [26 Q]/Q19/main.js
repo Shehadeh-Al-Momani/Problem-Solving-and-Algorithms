@@ -16,6 +16,7 @@ Array.prototype.isPartOf = function (array) {
   return true;
 };
 
+
 /*
 Examples:
 [].isSubsetOf([1, 2, 2]) // => true

@@ -8,6 +8,11 @@ Write a function that returns true if a number is even, and false otherwise.
 function evenOrNot(n) {
   return n % 2 === 0;
 }
+// OR 
+function evenOrNot(n) {
+  return !(n % 2);
+}
+
 /*
 Examples:
 evenOrNot(1) // => false
