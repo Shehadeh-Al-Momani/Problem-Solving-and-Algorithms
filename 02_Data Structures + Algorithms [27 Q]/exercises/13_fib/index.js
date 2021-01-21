@@ -10,13 +10,11 @@
 
 function fib(n) {
   let a = 0,  b = 1,c;
-  const fibonacciSeries = [a, b];
   for (let i = 2; i <= n; i++) {
       c = a+b;
-      fibonacciSeries.push(c)
       a=b;b=c;     
   }
-  return fibonacciSeries[fibonacciSeries.length-1];
+  return c;
 }
 
 module.exports = fib;
